@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfftkaiudjtma"]
+
+[ext_resource type="Script" uid="uid://prdibht2ox6k" path="res://ui/hud/hud.gd" id="1_rbyyf"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_rbyyf")
+
+[node name="QuitButton" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Quit"
