@@ -14,12 +14,16 @@ func open_menu():
 	add_child(menu)
 	menu.start_button.pressed.connect(_on_start_button_pressed)
 	menu.level_select_input.text_submitted.connect(_on_level_select_input_text_submitted)
+	menu.level_select_input.gui_input.connect(menu._on_level_select_input_gui_input)
+	menu.level_select_input.text_changed.connect(menu._on_level_select_input_text_changed)
 
 func close_menu():
 	# Remove the main menu
 	var menu = $Menu
 	menu.start_button.pressed.disconnect(_on_start_button_pressed)
 	menu.level_select_input.text_submitted.disconnect(_on_level_select_input_text_submitted)
+	menu.level_select_input.gui_input.disconnect(menu._on_level_select_input_gui_input)
+	menu.level_select_input.text_changed.disconnect(menu._on_level_select_input_text_changed)
 	menu.queue_free()
 
 func start_level(level_name: String = "start"):

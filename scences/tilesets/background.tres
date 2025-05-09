@@ -1,0 +1,55 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cckhhbvj8v681"]
+
+[ext_resource type="Texture2D" uid="uid://c0522cc7wne0x" path="res://scences/tilesets/background_tileset.png" id="1_16v51"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8l8u3"]
+resource_name = "Background"
+texture = ExtResource("1_16v51")
+6:0/0 = 0
+7:0/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+7:2/0 = 0
+14:7/0 = 0
+15:7/0 = 0
+16:7/0 = 0
+14:8/0 = 0
+15:8/0 = 0
+16:8/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+10:9/0 = 0
+11:9/0 = 0
+14:9/0 = 0
+15:9/0 = 0
+16:9/0 = 0
+8:10/0 = 0
+9:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+14:10/0 = 0
+15:10/0 = 0
+16:10/0 = 0
+8:11/0 = 0
+9:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+8:12/0 = 0
+9:12/0 = 0
+10:12/0 = 0
+11:12/0 = 0
+8:13/0 = 0
+9:13/0 = 0
+10:13/0 = 0
+11:13/0 = 0
+8:14/0 = 0
+9:14/0 = 0
+10:14/0 = 0
+11:14/0 = 0
+8:15/0 = 0
+9:15/0 = 0
+10:15/0 = 0
+11:15/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_8l8u3")
