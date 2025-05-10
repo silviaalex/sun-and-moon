@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=2 format=3 uid="uid://8rlisir7a78r"]
+
+[ext_resource type="Script" uid="uid://bxpg5dmyxdh8p" path="res://scences/characters/character_stats.gd" id="1_jti76"]
+
+[resource]
+script = ExtResource("1_jti76")
+base_speed = 150.0
+top_speed = 300.0
+acceleration = 0.1
+deceleration = 0.1
+jump_force = 350.0
+jump_deceleration = 0.5
+gravity = 980.0
+gravity_vector = Vector2(0, 1)
+left = &"moon_left"
+up = &"moon_up"
+right = &"moon_right"
+idle = &"idle"
+jumping = &"jumping"
+walking = &"walking"
+metadata/_custom_type_script = "uid://bxpg5dmyxdh8p"

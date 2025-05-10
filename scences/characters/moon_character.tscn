@@ -1,11 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdloeaifsans0"]
+[gd_scene load_steps=10 format=3 uid="uid://cdloeaifsans0"]
 
-[ext_resource type="Script" uid="uid://bni406eobe3xi" path="res://scences/characters/moon_character.gd" id="1_rrigx"]
-[ext_resource type="Texture2D" uid="uid://cp0ply10que0x" path="res://scences/characters/tilemap-characters_packed.png" id="1_whigf"]
+[ext_resource type="Script" uid="uid://xjn0nkvh51js" path="res://scences/characters/character.gd" id="1_rrigx"]
+[ext_resource type="Texture2D" uid="uid://cp0ply10que0x" path="res://scences/characters/characters_tileset.png" id="1_whigf"]
+[ext_resource type="Resource" uid="uid://8rlisir7a78r" path="res://scences/characters/moon_character.tres" id="2_mjdge"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rrigx"]
 atlas = ExtResource("1_whigf")
 region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxmhd"]
+atlas = ExtResource("1_whigf")
+region = Rect2(72, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mjdge"]
 atlas = ExtResource("1_whigf")
@@ -27,6 +32,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_fxmhd")
+}],
+"loop": true,
+"name": &"jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_mjdge")
 }, {
 "duration": 1.0,
@@ -40,17 +53,18 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_whigf"]
 radius = 9.0
 
-[node name="MoonCharacter" type="CharacterBody2D"]
+[node name="MoonCharacter" type="CharacterBody2D" node_paths=PackedStringArray("animated_sprite")]
 collision_layer = 4
-collision_mask = 113
+collision_mask = 115
 script = ExtResource("1_rrigx")
+stats = ExtResource("2_mjdge")
+animated_sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -12)
+position = Vector2(0, -11)
 sprite_frames = SubResource("SpriteFrames_fxmhd")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.490523
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -9)
