@@ -2,6 +2,13 @@ extends CharacterBody2D
 
 @export var stats : CharacterStats
 @export var animated_sprite: AnimatedSprite2D
+@export var character_name: String
+@export var game_node: Node = null
+var no_lives = 3
+@onready var damage_timer: Timer = $Timer
+
+func _ready():
+	damage_timer.timeout.connect(take_damage)
 
 func _physics_process(delta: float) -> void:
 	# Handle the movement on local gravity vertical axis
@@ -39,3 +46,17 @@ func _physics_process(delta: float) -> void:
 		else:
 			animated_sprite.flip_h = false
 	move_and_slide()
+	
+func take_damage() -> void:
+	if no_lives > 1:
+		var heart = "Heart" + character_name + str(no_lives)
+		no_lives -= 1
+		game_node.hearts.get_node(heart).visible = false;
+	else:
+		game_node.levels.get_node("Level").get_node("LoseState").visible = true
+	
+func get_damaged() -> void:
+	damage_timer.start()
+	
+func get_damaged_no_longer() -> void:
+	damage_timer.stop()
