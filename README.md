@@ -7,8 +7,7 @@ Assets used:
 
 Still to do:
 - high priority
-	- win/lose state
-	- spikes, lava and water
+	- win state
 - medium priority
 	- character abilities
 	- level transitions

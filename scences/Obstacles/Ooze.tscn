@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://x1x4fat8glt2"]
+
+[ext_resource type="Script" uid="uid://bq00hu71vo4su" path="res://scences/Obstacles/ooze.gd" id="1_ef2hm"]
+[ext_resource type="Texture2D" uid="uid://duy8dh11260pr" path="res://scences/tilesets/liquids.png" id="1_q3rf6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef2hm"]
+atlas = ExtResource("1_q3rf6")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ef2hm"]
+
+[node name="Ooze" type="Node2D"]
+script = ExtResource("1_ef2hm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_ef2hm")
+stretch_mode = 3
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 107
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ef2hm")

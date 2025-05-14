@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://yqry5cf0vupl"]
+
+[ext_resource type="Texture2D" uid="uid://duy8dh11260pr" path="res://scences/tilesets/liquids.png" id="1_sid2n"]
+[ext_resource type="Script" uid="uid://d173luo2afdpy" path="res://scences/Obstacles/water.gd" id="1_sw2xc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sw2xc"]
+atlas = ExtResource("1_sid2n")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw2xc"]
+
+[node name="Water" type="Node2D"]
+script = ExtResource("1_sw2xc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_sw2xc")
+stretch_mode = 3
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 107
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_sw2xc")
