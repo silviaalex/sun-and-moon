@@ -1,8 +1,8 @@
 extends CanvasLayer
 
-@onready var start_button: Button = $Container/StartButton
-@onready var level_select_input: LineEdit = $Container/LevelSelectInput
-@onready var quit_button: Button = $Container/QuitButton
+@onready var start_button: Button = %StartButton
+@onready var level_select_input: LineEdit = %LevelSelectInput
+@onready var quit_button: Button = %QuitButton
 
 func _ready() -> void:
 	quit_button.pressed.connect(_on_quit_button_pressed)

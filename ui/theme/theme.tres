@@ -1,6 +1,37 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://biaurqe4nyg8j"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://biaurqe4nyg8j"]
 
+[ext_resource type="Texture2D" uid="uid://buhf5o6vwwc80" path="res://ui/theme/ui_tilemap_large.png" id="1_cni3f"]
 [ext_resource type="FontFile" uid="uid://docgja7btbduy" path="res://ui/theme/PixelOperator8.ttf" id="1_rqugq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t6c4b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bipdn"]
+texture = ExtResource("1_cni3f")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(32, 64, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cni3f"]
+texture = ExtResource("1_cni3f")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(32, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q67kw"]
+texture = ExtResource("1_cni3f")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+region_rect = Rect2(0, 0, 32, 32)
 
 [resource]
 default_font = ExtResource("1_rqugq")
+Button/styles/focus = SubResource("StyleBoxEmpty_t6c4b")
+Button/styles/hover = SubResource("StyleBoxTexture_bipdn")
+Button/styles/normal = SubResource("StyleBoxTexture_cni3f")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_q67kw")

@@ -15,30 +15,40 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_udkah")
 
-[node name="Container" type="VBoxContainer" parent="."]
+[node name="Panel" type="PanelContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -34.0
-offset_top = -33.0
-offset_right = 34.0
-offset_bottom = 33.0
+offset_left = -76.0
+offset_right = 76.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_4c782")
 
-[node name="StartButton" type="Button" parent="Container"]
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Container" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="Panel/MarginContainer/Container"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Start"
 
-[node name="LevelSelectLabel" type="Label" parent="Container"]
+[node name="LevelSelectLabel" type="Label" parent="Panel/MarginContainer/Container"]
 layout_mode = 2
 text = "Level Select"
 horizontal_alignment = 1
 
-[node name="LevelSelectInput" type="LineEdit" parent="Container"]
+[node name="LevelSelectInput" type="LineEdit" parent="Panel/MarginContainer/Container"]
+unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/caret_color = Color(0, 0, 0, 0)
 placeholder_text = "password"
@@ -50,6 +60,7 @@ shortcut_keys_enabled = false
 middle_mouse_paste_enabled = false
 selecting_enabled = false
 
-[node name="QuitButton" type="Button" parent="Container"]
+[node name="QuitButton" type="Button" parent="Panel/MarginContainer/Container"]
+unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"

@@ -10,5 +10,6 @@ script = ExtResource("1_lbs7c")
 [node name="Menu" parent="." instance=ExtResource("2_cfxbr")]
 
 [node name="HUD" parent="." instance=ExtResource("3_b174u")]
+visible = false
 
 [node name="Levels" type="Node2D" parent="."]
