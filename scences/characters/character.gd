@@ -2,6 +2,11 @@ extends CharacterBody2D
 
 @export var stats : CharacterStats
 @export var animated_sprite: AnimatedSprite2D
+var is_alive: bool = true
+
+func _ready() -> void:
+	SignalBus.level_finished.connect(_on_character_freeze)
+	SignalBus.game_over.connect(_on_character_freeze)
 
 func _physics_process(delta: float) -> void:
 	# Handle the movement on local gravity vertical axis
@@ -38,4 +43,8 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.flip_h = true
 		else:
 			animated_sprite.flip_h = false
-	move_and_slide()
+	if is_alive:
+		move_and_slide()
+
+func _on_character_freeze():
+	is_alive = false

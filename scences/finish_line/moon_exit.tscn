@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dx7gpoxasd1dj"]
+
+[ext_resource type="PackedScene" uid="uid://cuokw0m7odap4" path="res://scences/finish_line/moon_finish_line.tscn" id="1_21poo"]
+[ext_resource type="Texture2D" uid="uid://cbyey20senind" path="res://scences/tilesets/tileset.png" id="2_nn6p4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l17uf"]
+size = Vector2(16, 16)
+
+[node name="MoonExit" type="Node2D"]
+
+[node name="MoonFinishLine" parent="." instance=ExtResource("1_21poo")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MoonFinishLine"]
+shape = SubResource("RectangleShape2D_l17uf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_nn6p4")
+region_enabled = true
+region_rect = Rect2(176, 112, 16, 16)

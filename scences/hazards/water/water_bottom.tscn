@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://jh6vwe5n3nj1"]
+
+[ext_resource type="Texture2D" uid="uid://cbyey20senind" path="res://scences/tilesets/tileset.png" id="1_0aqpw"]
+[ext_resource type="PackedScene" uid="uid://stvn5w0na1vc" path="res://scences/hazards/sun_hazard.tscn" id="2_he40p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxili"]
+size = Vector2(16, 16)
+
+[node name="WaterBottom" type="Node2D"]
+
+[node name="SunHazard" parent="." instance=ExtResource("2_he40p")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SunHazard"]
+shape = SubResource("RectangleShape2D_yxili")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_0aqpw")
+region_enabled = true
+region_rect = Rect2(176, 16, 16, 16)

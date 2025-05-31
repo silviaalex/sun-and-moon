@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://df6bb3hjvymkw"
+path="res://.godot/imported/Dark Fog.mp3-029832081a259ad0bd20f62e9ea3d8a0.mp3str"
+
+[deps]
+
+source_file="res://music/Dark Fog.mp3"
+dest_files=["res://.godot/imported/Dark Fog.mp3-029832081a259ad0bd20f62e9ea3d8a0.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

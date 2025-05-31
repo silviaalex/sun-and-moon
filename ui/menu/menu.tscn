@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cr88v56lgn1e0"]
+[gd_scene load_steps=3 format=3 uid="uid://cr88v56lgn1e0"]
 
 [ext_resource type="Script" uid="uid://cd7ss0pbbpjga" path="res://ui/menu/menu.gd" id="1_bwjgb"]
 [ext_resource type="Texture2D" uid="uid://cfxn5ojrmd28h" path="res://ui/menu/background.png" id="2_udkah"]
-[ext_resource type="Theme" uid="uid://biaurqe4nyg8j" path="res://ui/theme/theme.tres" id="3_4c782"]
 
 [node name="Menu" type="CanvasLayer"]
 script = ExtResource("1_bwjgb")
@@ -15,43 +14,56 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_udkah")
 
-[node name="Panel" type="PanelContainer" parent="."]
+[node name="Container" type="VBoxContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -76.0
-offset_right = 76.0
+offset_left = -152.0
+offset_top = -104.0
+offset_right = 152.0
+offset_bottom = 104.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_4c782")
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+[node name="MarginContainer" type="MarginContainer" parent="Container"]
 layout_mode = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
+theme_override_constants/margin_bottom = 16
 
-[node name="Container" type="VBoxContainer" parent="Panel/MarginContainer"]
+[node name="Title" type="Label" parent="Container/MarginContainer"]
 layout_mode = 2
+theme_type_variation = &"TitleLabel"
+text = "Sun and Moon"
+horizontal_alignment = 1
 
-[node name="StartButton" type="Button" parent="Panel/MarginContainer/Container"]
+[node name="Panel" type="PanelContainer" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Container/Panel"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="StartButton" type="Button" parent="Container/Panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Start"
 
-[node name="LevelSelectLabel" type="Label" parent="Panel/MarginContainer/Container"]
+[node name="LevelSelectLabel" type="Label" parent="Container/Panel/VBoxContainer"]
 layout_mode = 2
 text = "Level Select"
 horizontal_alignment = 1
 
-[node name="LevelSelectInput" type="LineEdit" parent="Panel/MarginContainer/Container"]
+[node name="LevelSelectInput" type="LineEdit" parent="Container/Panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/caret_color = Color(0, 0, 0, 0)
 placeholder_text = "password"
+alignment = 1
 max_length = 8
 expand_to_text_length = true
 context_menu_enabled = false
@@ -60,7 +72,7 @@ shortcut_keys_enabled = false
 middle_mouse_paste_enabled = false
 selecting_enabled = false
 
-[node name="QuitButton" type="Button" parent="Panel/MarginContainer/Container"]
+[node name="QuitButton" type="Button" parent="Container/Panel/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"

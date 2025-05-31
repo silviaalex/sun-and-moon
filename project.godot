@@ -15,6 +15,14 @@ run/main_scene="uid://b8yuiahkp0o3n"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout=""
+
+[autoload]
+
+SignalBus="*res://scences/signal_bus.tscn"
+
 [display]
 
 window/size/viewport_width=640
@@ -24,6 +32,10 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
+
+[gui]
+
+theme/custom="uid://biaurqe4nyg8j"
 
 [input]
 
@@ -66,7 +78,8 @@ moon_right={
 2d_physics/layer_4="SunHazards"
 2d_physics/layer_5="MoonHazards"
 2d_physics/layer_6="Tips"
-2d_physics/layer_7="Exit"
+2d_physics/layer_7="SunFinishLine"
+2d_physics/layer_8="MoonFinishLine"
 
 [rendering]
 

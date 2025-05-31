@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cuokw0m7odap4"]
+
+[ext_resource type="Script" uid="uid://duwrh1e2lx2gn" path="res://scences/finish_line/finish_line.gd" id="1_lephe"]
+
+[node name="MoonFinishLine" type="Area2D"]
+collision_layer = 128
+collision_mask = 4
+script = ExtResource("1_lephe")
+player = 1

@@ -1,37 +1,95 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://biaurqe4nyg8j"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://biaurqe4nyg8j"]
 
-[ext_resource type="Texture2D" uid="uid://buhf5o6vwwc80" path="res://ui/theme/ui_tilemap_large.png" id="1_cni3f"]
+[ext_resource type="Texture2D" uid="uid://buhf5o6vwwc80" path="res://ui/theme/ui_tilemap.png" id="1_cni3f"]
 [ext_resource type="FontFile" uid="uid://docgja7btbduy" path="res://ui/theme/PixelOperator8.ttf" id="1_rqugq"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t6c4b"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bipdn"]
 texture = ExtResource("1_cni3f")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
-region_rect = Rect2(32, 64, 32, 32)
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(32, 32, 32, 32)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cni3f"]
 texture = ExtResource("1_cni3f")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 region_rect = Rect2(32, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_41ywq"]
+texture = ExtResource("1_cni3f")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(128, 64, 32, 32)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cni3f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1apww"]
+texture = ExtResource("1_cni3f")
+texture_margin_left = 13.0
+texture_margin_top = 13.0
+texture_margin_right = 13.0
+texture_margin_bottom = 13.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(32, 96, 32, 32)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q67kw"]
 texture = ExtResource("1_cni3f")
-texture_margin_left = 5.0
-texture_margin_top = 5.0
-texture_margin_right = 5.0
-texture_margin_bottom = 5.0
-region_rect = Rect2(0, 0, 32, 32)
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 32, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4v5r2"]
+texture = ExtResource("1_cni3f")
+texture_margin_left = 32.0
+texture_margin_top = 8.0
+texture_margin_right = 32.0
+texture_margin_bottom = 12.0
+expand_margin_left = 4.0
+expand_margin_top = 8.0
+expand_margin_right = 4.0
+expand_margin_bottom = 8.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(128, 128, 96, 32)
 
 [resource]
 default_font = ExtResource("1_rqugq")
+Button/colors/font_color = Color(1, 0.945098, 0.823529, 1)
+Button/colors/font_focus_color = Color(1, 0.945098, 0.823529, 1)
+Button/colors/font_hover_color = Color(1, 0.945098, 0.823529, 1)
+Button/colors/font_pressed_color = Color(1, 0.945098, 0.823529, 1)
 Button/styles/focus = SubResource("StyleBoxEmpty_t6c4b")
 Button/styles/hover = SubResource("StyleBoxTexture_bipdn")
 Button/styles/normal = SubResource("StyleBoxTexture_cni3f")
+Button/styles/pressed = SubResource("StyleBoxTexture_41ywq")
+Label/colors/font_color = Color(0.4, 0.368627, 0.286275, 1)
+LineEdit/colors/caret_color = Color(1, 1, 1, 0)
+LineEdit/colors/font_color = Color(1, 0.945098, 0.823529, 1)
+LineEdit/colors/font_placeholder_color = Color(1, 0.945098, 0.823529, 0.6)
+LineEdit/constants/minimum_character_width = 9
+LineEdit/styles/focus = SubResource("StyleBoxEmpty_cni3f")
+LineEdit/styles/normal = SubResource("StyleBoxTexture_1apww")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_q67kw")
+TitleLabel/base_type = &"Label"
+TitleLabel/colors/font_color = Color(1, 0.945098, 0.823529, 1)
+TitleLabel/font_sizes/font_size = 24
+TitleLabel/styles/normal = SubResource("StyleBoxTexture_4v5r2")

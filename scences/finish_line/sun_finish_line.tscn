@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu1xbsvjmtfof"]
+
+[ext_resource type="Script" uid="uid://duwrh1e2lx2gn" path="res://scences/finish_line/finish_line.gd" id="1_hasik"]
+
+[node name="SunFinishLine" type="Area2D"]
+collision_layer = 64
+collision_mask = 2
+script = ExtResource("1_hasik")

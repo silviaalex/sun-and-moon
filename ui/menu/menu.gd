@@ -5,6 +5,8 @@ extends CanvasLayer
 @onready var quit_button: Button = %QuitButton
 
 func _ready() -> void:
+	level_select_input.gui_input.connect(_on_level_select_input_gui_input)
+	level_select_input.text_changed.connect(_on_level_select_input_text_changed)
 	quit_button.pressed.connect(_on_quit_button_pressed)
 
 func _on_level_select_input_gui_input(_event: InputEvent) -> void:

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2vy566pa4ne1"]
+
+[ext_resource type="PackedScene" uid="uid://bu1xbsvjmtfof" path="res://scences/finish_line/sun_finish_line.tscn" id="1_hxjl2"]
+[ext_resource type="Texture2D" uid="uid://cbyey20senind" path="res://scences/tilesets/tileset.png" id="2_l128b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkxkm"]
+size = Vector2(16, 16)
+
+[node name="SunExit" type="Node2D"]
+
+[node name="SunFinishLine" parent="." instance=ExtResource("1_hxjl2")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SunFinishLine"]
+shape = SubResource("RectangleShape2D_fkxkm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_l128b")
+region_enabled = true
+region_rect = Rect2(176, 96, 16, 16)

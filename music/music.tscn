@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://csx4m7y35778g"]
+
+[ext_resource type="Script" uid="uid://jek8q2ov0v8e" path="res://music/music.gd" id="1_gw4jf"]
+[ext_resource type="AudioStream" uid="uid://df6bb3hjvymkw" path="res://music/Dark Fog.mp3" id="1_luf1b"]
+[ext_resource type="AudioStream" uid="uid://bjptn2jo4kddp" path="res://music/Decline.mp3" id="3_akenf"]
+[ext_resource type="AudioStream" uid="uid://bdeybjiqcgu8n" path="res://music/Heavy Heart.mp3" id="4_t501q"]
+[ext_resource type="AudioStream" uid="uid://kvabsggfocjw" path="res://music/Heart of Nowhere.mp3" id="5_eikdc"]
+[ext_resource type="AudioStream" uid="uid://denof1aginmo1" path="res://music/Unpromised.mp3" id="6_eovk6"]
+
+[node name="Music" type="Node"]
+script = ExtResource("1_gw4jf")
+
+[node name="Mountain" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_luf1b")
+bus = &"Music"
+
+[node name="Cave" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_akenf")
+bus = &"Music"
+
+[node name="Morning" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_t501q")
+bus = &"Music"
+
+[node name="Evening" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_eikdc")
+bus = &"Music"
+
+[node name="Menu" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_eovk6")
+volume_db = -1.0
+autoplay = true
+bus = &"Music"

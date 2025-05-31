@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kvabsggfocjw"
+path="res://.godot/imported/Heart of Nowhere.mp3-a8d757b37cd3a98fa940baf090a74201.mp3str"
+
+[deps]
+
+source_file="res://music/Heart of Nowhere.mp3"
+dest_files=["res://.godot/imported/Heart of Nowhere.mp3-a8d757b37cd3a98fa940baf090a74201.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

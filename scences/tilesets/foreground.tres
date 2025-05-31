@@ -1,6 +1,15 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://cb2pcgw0mg8kr"]
+[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://cb2pcgw0mg8kr"]
 
 [ext_resource type="Texture2D" uid="uid://cbyey20senind" path="res://scences/tilesets/tileset.png" id="1_6uo6r"]
+[ext_resource type="PackedScene" uid="uid://dwmol8xos45vh" path="res://scences/hazards/lava/lava_top.tscn" id="2_4u886"]
+[ext_resource type="PackedScene" uid="uid://dx7gpoxasd1dj" path="res://scences/finish_line/moon_exit.tscn" id="2_tjntk"]
+[ext_resource type="PackedScene" uid="uid://ch4cb237cp5so" path="res://scences/hazards/lava/lava_bottom.tscn" id="3_48xkm"]
+[ext_resource type="PackedScene" uid="uid://y34x4fbohxmb" path="res://scences/hazards/water/water_top.tscn" id="4_bwnu8"]
+[ext_resource type="PackedScene" uid="uid://jh6vwe5n3nj1" path="res://scences/hazards/water/water_bottom.tscn" id="5_tjntk"]
+[ext_resource type="PackedScene" uid="uid://15le26d6bkrh" path="res://scences/hazards/ooze/ooze_top.tscn" id="6_wt0el"]
+[ext_resource type="PackedScene" uid="uid://duspihygjw12o" path="res://scences/hazards/ooze/ooze_bottom.tscn" id="7_af367"]
+[ext_resource type="PackedScene" uid="uid://dlrruw0i1x6p5" path="res://scences/hazards/spikes/spikes.tscn" id="8_ems61"]
+[ext_resource type="PackedScene" uid="uid://b2vy566pa4ne1" path="res://scences/finish_line/sun_exit.tscn" id="10_wt0el"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tas22"]
 resource_name = "Tileset"
@@ -88,7 +97,19 @@ texture = ExtResource("1_6uo6r")
 9:7/0 = 0
 9:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6, 8, -8, 8, -2, -8, 0)
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_36itr"]
+scenes/2/scene = ExtResource("2_4u886")
+scenes/3/scene = ExtResource("3_48xkm")
+scenes/4/scene = ExtResource("4_bwnu8")
+scenes/5/scene = ExtResource("5_tjntk")
+scenes/6/scene = ExtResource("6_wt0el")
+scenes/7/scene = ExtResource("7_af367")
+scenes/8/scene = ExtResource("8_ems61")
+scenes/9/scene = ExtResource("10_wt0el")
+scenes/10/scene = ExtResource("2_tjntk")
+
 [resource]
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 6
 sources/0 = SubResource("TileSetAtlasSource_tas22")
+sources/1 = SubResource("TileSetScenesCollectionSource_36itr")

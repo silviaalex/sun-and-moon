@@ -1,21 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://cfftkaiudjtma"]
+[gd_scene load_steps=2 format=3 uid="uid://cfftkaiudjtma"]
 
 [ext_resource type="Script" uid="uid://prdibht2ox6k" path="res://ui/hud/hud.gd" id="1_rbyyf"]
-[ext_resource type="Theme" uid="uid://biaurqe4nyg8j" path="res://ui/theme/theme.tres" id="2_4d6w6"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_rbyyf")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 54.0
+grow_horizontal = 2
 
-[node name="QuitButton" type="Button" parent="HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
 layout_mode = 2
-theme = ExtResource("2_4d6w6")
+
+[node name="QuitButton" type="Button" parent="PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
 text = "Quit"
 
-[node name="RestartButton" type="Button" parent="HBoxContainer"]
+[node name="RestartButton" type="Button" parent="PanelContainer/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
-theme = ExtResource("2_4d6w6")
 text = "Restart"
+
+[node name="PasswordLabel" type="Label" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Password: "
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 8
+
+[node name="Password" type="Label" parent="PanelContainer/HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Test"
+horizontal_alignment = 2

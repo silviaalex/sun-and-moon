@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://15le26d6bkrh"]
+
+[ext_resource type="Texture2D" uid="uid://cbyey20senind" path="res://scences/tilesets/tileset.png" id="1_xjlmb"]
+[ext_resource type="PackedScene" uid="uid://b56i7mf7c1qyi" path="res://scences/hazards/moon_hazard.tscn" id="2_uc3bh"]
+[ext_resource type="PackedScene" uid="uid://stvn5w0na1vc" path="res://scences/hazards/sun_hazard.tscn" id="3_uc3bh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5uok4"]
+size = Vector2(12, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgvol"]
+size = Vector2(12, 12)
+
+[node name="OozeTop" type="Node2D"]
+
+[node name="SunHazard" parent="." instance=ExtResource("3_uc3bh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SunHazard"]
+shape = SubResource("RectangleShape2D_5uok4")
+
+[node name="MoonHazard" parent="." instance=ExtResource("2_uc3bh")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MoonHazard"]
+shape = SubResource("RectangleShape2D_fgvol")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xjlmb")
+region_enabled = true
+region_rect = Rect2(176, 64, 16, 16)
